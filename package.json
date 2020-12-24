@@ -36,6 +36,8 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^6.2.1",
-    "semver": "^7.3.4"
+    "inquirer": "^7.3.3",
+    "semver": "^7.3.4",
+    "validate-npm-package-name": "^3.0.0"
   }
 }
