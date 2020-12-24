@@ -6,17 +6,36 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "cabala": "bin/cabala.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maggot-code/cabala-cli.git"
   },
   "keywords": [
-    "cabala"
+    "cabala",
+    "cli",
+    "vue cli"
   ],
-  "author": "hanserena (1662580002@qq.com)",
+  "author": "hanserena <1662580002@qq.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/maggot-code/cabala-cli/issues"
   },
-  "homepage": "https://github.com/maggot-code/cabala-cli#readme"
+  "homepage": "https://github.com/maggot-code/cabala-cli#readme",
+  "engines": {
+    "node": ">=10.16.3"
+  },
+  "template": [
+    "vue"
+  ],
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.2.1",
+    "semver": "^7.3.4"
+  }
 }
