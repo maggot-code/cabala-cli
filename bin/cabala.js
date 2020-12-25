@@ -4,7 +4,7 @@
  * @Author: maggot-code
  * @Date: 2020-12-24 09:28:43
  * @LastEditors: maggot-code
- * @LastEditTime: 2020-12-26 00:33:10
+ * @LastEditTime: 2020-12-26 01:56:31
  * @Description: file content
  */
 
@@ -28,6 +28,14 @@ program.command('new <type> <project-name>')
     .action((type, projectName, cmd) => {
         checkCommandLength(process.argv.length, 5)
         create(lowercase(type), projectName, cmd)
+    })
+
+// 输出模板列表
+program.command('type')
+    .description('show cabala type list')
+    .action(() => {
+        const typeList = package.template.map(item => `${item}\r`);
+        console.log(typeList.join(' '));
     })
 
 program.parse(process.argv)
