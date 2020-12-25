@@ -2,10 +2,11 @@
  * @Author: maggot-code
  * @Date: 2020-12-24 12:04:14
  * @LastEditors: maggot-code
- * @LastEditTime: 2020-12-24 12:19:17
+ * @LastEditTime: 2020-12-25 23:51:17
  * @Description: file content
  */
 const chalk = require('chalk');
+const { exec } = require('shelljs');
 
 const lowercase = str => {
     return str.toLocaleLowerCase();
@@ -19,7 +20,12 @@ const checkCommandLength = (argvLen, maxArgvLens) => {
     }
 }
 
+const shellRun = (shell) => {
+    return exec(shell, { silent: true }).stdout;
+}
+
 module.exports = {
     lowercase,
-    checkCommandLength
+    checkCommandLength,
+    shellRun
 }
