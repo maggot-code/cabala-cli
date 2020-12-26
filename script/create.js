@@ -2,7 +2,7 @@
  * @Author: maggot-code
  * @Date: 2020-12-24 12:42:16
  * @LastEditors: maggot-code
- * @LastEditTime: 2020-12-26 01:42:23
+ * @LastEditTime: 2020-12-27 01:28:24
  * @Description: file content
  */
 // 👍🚀👏🔥
@@ -14,6 +14,8 @@ const chalk = require('chalk');
 const semver = require('semver');
 const inquirer = require('inquirer');
 const validateProjectName = require('validate-npm-package-name');
+const { cd, exec } = require('shelljs');
+
 const { copyTemplate } = require('../template/copyTemplate');
 const { updateCabala } = require('./updateCabala');
 const { shellRun } = require('./utils');
@@ -99,7 +101,10 @@ async function create(type, projectName, options) {
             if (!ok) {
                 return Promise.reject(chalk.yellow(`You cancel (^_−)☆`))
             } else {
-                copyTemplate();
+                return copyTemplate(type, targetDir).then(res => {
+                    console.log(res);
+                    console.log(`You can into ${chalk.yellow(targetDir)} execute "${chalk.green('npm install')}"\r`);
+                }).catch(error => error)
             }
         }
     }
