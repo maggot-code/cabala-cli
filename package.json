@@ -31,17 +31,12 @@
     "node": ">=10.16.3"
   },
   "template": [
-    "vue",
-    "vue2"
+    "vue"
   ],
   "templateAddress": {
     "vue": {
       "github": "https://github.com/maggot-code/base-vue-template.git",
       "download": "github:maggot-code/base-vue-template"
-    },
-    "vue2": {
-      "github": "https://github.com/maggot-code/Cabala-base-vue.git",
-      "download": "github:maggot-code/Cabala-base-vue"
     }
   },
   "dependencies": {
