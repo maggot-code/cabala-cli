@@ -2,10 +2,11 @@
  * @Author: maggot-code
  * @Date: 2020-12-24 23:30:27
  * @LastEditors: maggot-code
- * @LastEditTime: 2020-12-27 01:27:27
+ * @LastEditTime: 2021-01-04 17:15:35
  * @Description: file content
  */
 const chalk = require('chalk');
+const { rm } = require('shelljs');
 const download = require('download-git-repo');
 
 const templateAddress = require('../package.json').templateAddress;

@@ -36,7 +36,7 @@
   "templateAddress": {
     "vue": {
       "github": "https://github.com/maggot-code/base-vue-template.git",
-      "download": "github:maggot-code/base-vue-template"
+      "download": "github:maggot-code/base-vue-template#main"
     }
   },
   "dependencies": {
