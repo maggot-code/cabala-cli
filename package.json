@@ -31,7 +31,8 @@
     "node": ">=10.16.3"
   },
   "template": [
-    "vue"
+    "vue",
+    "vue2"
   ],
   "templateAddress": {
     "vue": {
